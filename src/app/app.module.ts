@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DonutChartComponent } from './donut-chart/donut-chart.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
+import { CustomSelectComponent } from './custom-select/custom-select.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DonutChartComponent,
+    LineChartComponent,
+    CustomSelectComponent
   ],
   imports: [
     BrowserModule

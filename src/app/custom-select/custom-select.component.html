@@ -1,0 +1,18 @@
+<div *ngIf="options && options.length" class="custom-select">
+	<select #nativeSelect>
+		<option *ngFor="let option of options" [selected]="option.value === selectedOption.value" value="option.value">{{option.label}}</option>
+	</select>
+	<div>
+		<ul #customSelect role="listbox" aria-label="Select a name" (keydown.enter)="openSelectMenu()">
+			<li *ngFor="let option of options"
+				tabindex="{{tabIndex(option)}}"
+				role="option"
+				data-value="{{option.value}}"
+				(keydown.arrowdown)="moveDown($event, option)"
+				(keydown.arrowup)="moveUp($event, option)"
+				(keydown.enter)="updateSelection(option)"
+				(click)="updateSelection(option)">
+			{{option.label}}</li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,57 @@
+
+// RESET
+
+html * { box-sizing: content-box; }
+
+body { margin: 0; }
+
+
+// BASIC SETUP
+
+html {
+	background: #EEEEEE;
+	font-size: 10px;
+	font-family: sans-serif;
+}
+
+body {
+	padding: 2rem;
+}
+
+// SIMPLE CSS GRID LAYOUT
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: minmax(20rem, auto);
+	grid-column-gap: 2rem;
+	grid-row-gap: 2rem;
+	@media screen and (min-width: 768px) {
+		grid-template-columns: 1fr 1fr;
+		
+	}
+	@media screen and (min-width: 960px) {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+
+// LOOK
+
+.card {
+	overflow: hidden;
+	background: white;
+	border-radius: 0.2rem;
+	border: 0.1rem solid #E0E0E0;
+	.card-title {
+		font-size: 2rem;
+		padding: 2rem;
+		color: white;
+		background: #03A9F4;
+	}
+	.card-content {
+		padding: 2rem;
+		color: #434343;
+		font-size: 1.6rem;
+	}
+}
